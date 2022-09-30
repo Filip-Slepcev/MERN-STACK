@@ -1,26 +1,27 @@
-import logo from "../assets/images/logo.svg";
-import main from "../assets/images/main-alternative.svg";
+import main from "../assets/images/main.svg";
 import Wrapper from "../assets/wrappers/LandingPage";
-
+import { Logo } from "../components";
+import { Link } from "react-router-dom";
 const Landing = () => {
 	return (
 		<Wrapper>
 			<nav>
-				<img src={logo} alt="jobify" className="logo" />
+				<Logo />
 			</nav>
-			<div className="container">
+			<div className="container page">
+				{/* info */}
 				<div className="info">
 					<h1>
 						job <span>tracking</span> app
 					</h1>
 					<p>
-						I'm baby locavore fashion axe bruh banjo, tumeric brunch church-key poutine
-						ethical synth cloud bread street art +1 iPhone. VHS direct trade tilde
-						coloring book subway tile. Edison bulb +1 scenester, etsy prism vinyl
-						disrupt franzen. Portland keytar poutine heirloom authentic, quinoa
-						aesthetic offal skateboard 8-bit tousled occupy.
+						I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue bottle
+						single-origin coffee chia. Aesthetic post-ironic venmo, quinoa lo-fi tote
+						bag adaptogen everyday carry meggings +1 brunch narwhal.
 					</p>
-					<button className="btn btn-hero">Login/Register</button>
+					<Link to="/register" className="btn btn-hero">
+						Login/Register
+					</Link>
 				</div>
 				<img src={main} alt="job hunt" className="img main-img" />
 			</div>
